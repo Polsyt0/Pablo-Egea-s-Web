@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Boilerplate de sitio web: estructura semántica + diseño basado en Flexbox, responsive, tipografías y iconografía desde CDN.">
+    <meta name="author" content="Tu Nombre">
+
+    <title>Boilerplate — Sitio Web</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="site-wrapper">
+
+    <header class="site-header" role="banner">
+        <div class="container">
+        <div class="brand">
+            <a href="#" class="logo">Pablo Egea's Page</a>
+        </div>
+        <nav class="main-nav" role="navigation" aria-label="Menú principal">
+            <button class="nav-toggle" aria-expanded="false" aria-controls="main-menu">Menú <span class="material-icons">menu</span></button>
+            <ul id="main-menu" class="menu">
+            <li><a href="#">Inicio</a></li> <!-- En construcción -->
+            <li><a href="#">Servicios</a></li> <!-- En construcción -->
+            <li><a href="#">Proyectos</a></li> <!-- En construcción -->
+            <li><a href="#">Contacto</a></li> <!-- En construcción -->
+            </ul>
+        </nav>
+        </div>
+    </header>
+
+    <main class="site-main" role="main">
+        <div class="hero">
+            <div class="container hero-inner">
+                <div class="hero-copy">
+                <h1>Programador Web, desarrollando tus sueños desde 2025</h1>
+                <p>Tu desarrollador web favorito, tu pide por la boca y yo te lo concedo, tu pagina web, tus diseños, desarrollador full-stack a tus servicios. </p>
+                <a class="btn" href="#content">Ver contenido</a>
+                </div>
+                <div class="hero-media">
+                <img src="images/Banner.png" alt="Imagen representativa de cabecera" width="720" height="420">
+                </div>
+            </div>
+        </div>
+
+        <div id="content" class="container content-grid">
+        <aside class="site-aside" role="complementary">
+            <h2>Noticias</h2>
+            <ul class="aside-list">
+            <li><a href="#">Te hago el HTML</a></li>
+            <li><a href="#">Te hago el CSS</a></li>
+            <li><a href="#">Te hago el JavaScript</a></li>
+            </ul>
+        </aside>
+
+        <section class="content-area">
+            <h2>Artículos recientes</h2>
+
+            <article class="post">
+            <img src="images/HTML5_logo_and_wordmark.svg.png" alt="Miniatura artículo 1" class="post-thumb" width="420" height="240">
+            <div class="post-body">
+                <h3>Te hago el HTML</h3>
+                <p>Hyper-text-markup-language</p>
+                <a class="read-more" href="#">Leer más</a>
+            </div>
+            </article>
+
+            <article class="post">
+            <img src="images/logotipo_css-min.png" alt="Miniatura artículo 2" class="post-thumb" width="420" height="240">
+            <div class="post-body">
+                <h3>Te hago el CSS</h3>
+                <p>Controlo todos los estilos que quieras y te hago el css de tus sueños.</p>
+                <a class="read-more" href="#">Leer más</a>
+            </div>
+            </article>
+
+        <article class="post">
+            <img src="images/javascript-1.png" alt="Miniatura artículo 3" class="post-thumb" width="420" height="240">
+            <div class="post-body">
+                <h3>Te hago el JavaScript</h3>
+                <p>Una pagina con unos efectos to guapos que vas a flipar</p>
+                <a class="read-more" href="#">Leer más</a>
+            </div>
+            </article>
+
+        </section>
+        </div>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="container footer-inner">
+        <div class="footer-brand">
+            <a href="#">Pablo Egea's Page</a>
+        </div>
+        <div class="socials" aria-label="Redes sociales">
+            <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+        </div>
+        <div class="container footer-bottom">
+            <small>&copy; <span id="year"></span>Pablo Egea's Page. Todos los derechos reservados.</small>
+        </div>
+    </footer>
+
+    </div>
+
+    <script>
+    // Script mínimo para actualizar año y controlar toggle del menú (sin dependencias)
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const toggle = document.querySelector('.nav-toggle');
+    const menu = document.getElementById('main-menu');
+    toggle && toggle.addEventListener('click', () => {
+        const expanded = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', String(!expanded));
+        menu.classList.toggle('open');
+    });
+    </script>
+</body>
+</html>
+
